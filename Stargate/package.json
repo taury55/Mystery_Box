@@ -1,0 +1,23 @@
+{
+	"name": "stargate",
+	"version": "0.0.0",
+	"scripts": {
+		"prebuild": "rimraf dist",
+		"dev": "vite --host",
+		"build": "vite build",
+		"serve": "vite preview --host"
+	},
+	"devDependencies": {
+		"rollup-plugin-asset-url": "^0.1.1",
+		"rollup-plugin-copy": "^3.4.0",
+		"rollup-plugin-dynamic-import-variables": "^1.1.0",
+		"rollup-plugin-gltf": "^2.0.0",
+		"vite": "^2.3.8"
+	},
+	"dependencies": {
+		"pm2": "^5.1.0",
+		"rimraf": "^3.0.2",
+		"rollup-plugin-import-assets": "^1.1.1",
+		"three": "^0.130.0"
+	}
+}

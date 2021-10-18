@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/mb/stargate/assets/stargate_icon.095f4eb9.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mystery Box</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<script type="module" crossorigin src="/mb/stargate/assets/index.0b4eeb98.js"></script>
+  <link rel="modulepreload" href="/mb/stargate/assets/vendor.ded4d796.js">
+  <link rel="stylesheet" href="/mb/stargate/assets/index.e567ac5c.css">
+</head>
+	<body>
+		<button id="lights" class="lights-btn">Lights</button>
+
+		<label class="sd-checker">
+			<input id="sd-input" type="checkbox">
+			<span class="sd-checker-span">Symbol<br>Database</span>
+		</label>
+
+		<div class="sd-panel-wrap" id="sd-panel">
+			<div class="sd-panel">
+				<div class="sd-name">Symbol Database</div>
+				<div class="sd-info">Input space coordinates to get specific constellation glyph.</div>
+				<div class="sd-input-row">
+					<div class="sd-input-holder">
+						<input class="sd-input-num" type=text id="sd-input-num-1" value="0">
+						<span class="sd-dash">-</span>
+						<input class="sd-input-num" type=text id="sd-input-num-2" value="0">
+						<span class="sd-dash">-</span>
+						<input class="sd-input-num" type=text id="sd-input-num-3" value="0">
+					</div>
+					<div class="sd-spacer"></div>
+					<div class="sd-input-holder">
+						<input class="sd-input-num" type=text id="sd-input-num-4" value="0">
+						<span class="sd-dash">-</span>
+						<input class="sd-input-num" type=text id="sd-input-num-5" value="0">
+						<span class="sd-dash">-</span>
+						<input class="sd-input-num" type=text id="sd-input-num-6" value="0">
+					</div>
+				</div>
+				<div class="sd-result-row">
+					<div>Result:</div>
+					<div class="sd-result-holder">
+						<div class="sd-result-text" id="sd-result"></div>
+					</div>
+					<button class="sd-search-btn" id="sd-search">Search</button>
+				</div>
+			</div>
+		</div>
+
+		<label class="info-checker">
+			<input id="info-input" type="checkbox">
+			<span class="info-checker-span">Info</span>
+		</label>
+
+		<div class="info-panel-wrap" id="info-panel">
+			<div class="info-panel">
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">1</div>
+					<div class="symbolPicture">A</div>
+					<div class="symbolInfoName">Point Of Origin</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">2</div>
+					<div class="symbolPicture">B</div>
+					<div class="symbolInfoName">Crater</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">3</div>
+					<div class="symbolPicture">C</div>
+					<div class="symbolInfoName">Virgo</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">4</div>
+					<div class="symbolPicture">D</div>
+					<div class="symbolInfoName">Boötes</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">5</div>
+					<div class="symbolPicture">E</div>
+					<div class="symbolInfoName">Centaurus</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">6</div>
+					<div class="symbolPicture">F</div>
+					<div class="symbolInfoName">Libra</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">7</div>
+					<div class="symbolPicture">G</div>
+					<div class="symbolInfoName">Serpens Caput</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">8</div>
+					<div class="symbolPicture">H</div>
+					<div class="symbolInfoName">Norma</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">9</div>
+					<div class="symbolPicture">I</div>
+					<div class="symbolInfoName">Scorpius</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">10</div>
+					<div class="symbolPicture">J</div>
+					<div class="symbolInfoName">Corona Australis</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">11</div>
+					<div class="symbolPicture">K</div>
+					<div class="symbolInfoName">Scutum</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">12</div>
+					<div class="symbolPicture">L</div>
+					<div class="symbolInfoName">Sagittarius</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">13</div>
+					<div class="symbolPicture">M</div>
+					<div class="symbolInfoName">Aquila</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">14</div>
+					<div class="symbolPicture">N</div>
+					<div class="symbolInfoName">Microscopium</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">15</div>
+					<div class="symbolPicture">O</div>
+					<div class="symbolInfoName">Capricornus</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">16</div>
+					<div class="symbolPicture">P</div>
+					<div class="symbolInfoName">Piscis Austrinus</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">17</div>
+					<div class="symbolPicture">Q</div>
+					<div class="symbolInfoName">Equuleus</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">18</div>
+					<div class="symbolPicture">R</div>
+					<div class="symbolInfoName">Aquarius</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">19</div>
+					<div class="symbolPicture">S</div>
+					<div class="symbolInfoName">Pegasus</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">20</div>
+					<div class="symbolPicture">T</div>
+					<div class="symbolInfoName">Sculptor</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">21</div>
+					<div class="symbolPicture">U</div>
+					<div class="symbolInfoName">Pisces</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">22</div>
+					<div class="symbolPicture">V</div>
+					<div class="symbolInfoName">Andromeda</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">23</div>
+					<div class="symbolPicture">W</div>
+					<div class="symbolInfoName">Triangulum</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">24</div>
+					<div class="symbolPicture">X</div>
+					<div class="symbolInfoName">Aries</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">25</div>
+					<div class="symbolPicture">Y</div>
+					<div class="symbolInfoName">Perseus</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">26</div>
+					<div class="symbolPicture">Z</div>
+					<div class="symbolInfoName">Cetus</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">27</div>
+					<div class="symbolPicture">a</div>
+					<div class="symbolInfoName">Taurus</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">28</div>
+					<div class="symbolPicture">b</div>
+					<div class="symbolInfoName">Auriga</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">29</div>
+					<div class="symbolPicture">c</div>
+					<div class="symbolInfoName">Eridanus</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">30</div>
+					<div class="symbolPicture">d</div>
+					<div class="symbolInfoName">Orion</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">31</div>
+					<div class="symbolPicture">e</div>
+					<div class="symbolInfoName">Canis Minor</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">32</div>
+					<div class="symbolPicture">f</div>
+					<div class="symbolInfoName">Monoceros</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">33</div>
+					<div class="symbolPicture">g</div>
+					<div class="symbolInfoName">Gemini</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">34</div>
+					<div class="symbolPicture">h</div>
+					<div class="symbolInfoName">Hydra</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">35</div>
+					<div class="symbolPicture">i</div>
+					<div class="symbolInfoName">Lynx</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">36</div>
+					<div class="symbolPicture">j</div>
+					<div class="symbolInfoName">Cancer</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">37</div>
+					<div class="symbolPicture">k</div>
+					<div class="symbolInfoName">Sextans</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">38</div>
+					<div class="symbolPicture">l</div>
+					<div class="symbolInfoName">Leo Minor</div>
+				</div>
+				<div class="symbolInfo">
+					<div class="symbolInfoNum">39</div>
+					<div class="symbolPicture">m</div>
+					<div class="symbolInfoName">Leo</div>
+				</div>
+			</div>
+		</div>
+
+		<label class="stargate-checker">
+			<input id="stargate-input" type="checkbox">
+			<span class="stargate-checker-span">Dialing Computer</span>
+		</label>
+
+		<div class="stargate-panel-wrap" id="stargate-panel">
+			<div class="stargate-panel">
+				<img id="portal" src="/mb/stargate/assets/event-horizon.cfcef649.gif">
+				<div class="interface">
+					<img class="logo" src="/mb/stargate/assets/sgc-logo.ff1f583d.png">
+
+					<div class="lights">
+						<div id="light-1" class="light"></div>
+						<div id="light-2" class="light"></div>
+						<div id="light-3" class="light"></div>
+					</div>
+
+					<div class="binaries">
+						<div id="binary-1" class="binary"></div>
+						<div id="binary-2" class="binary"></div>
+					</div>
+
+					<div id="light-4"></div>
+
+					<div class="status-list">
+						<div id="status-0" class="status">
+							<div class="ko engaged"></div>
+							<div class="ok"></div>
+							<div class="number">1</div>
+							<div class="label">KO</div>
+						</div>
+						<div id="status-1" class="status">
+							<div class="ko engaged"></div>
+							<div class="ok"></div>
+							<div class="number">2</div>
+							<div class="label">KO</div>
+						</div>
+						<div id="status-2" class="status">
+							<div class="ko engaged"></div>
+							<div class="ok"></div>
+							<div class="number">3</div>
+							<div class="label">KO</div>
+						</div>
+						<div id="status-3" class="status">
+							<div class="ko engaged"></div>
+							<div class="ok"></div>
+							<div class="number">4</div>
+							<div class="label">KO</div>
+						</div>
+						<div id="status-4" class="status">
+							<div class="ko engaged"></div>
+							<div class="ok"></div>
+							<div class="number">5</div>
+							<div class="label">KO</div>
+						</div>
+						<div id="status-5" class="status">
+							<div class="ko engaged"></div>
+							<div class="ok"></div>
+							<div class="number">6</div>
+							<div class="label">KO</div>
+						</div>
+						<div id="status-6" class="status">
+							<div class="ko engaged"></div>
+							<div class="ok"></div>
+							<div class="number">7</div>
+							<div class="label">KO</div>
+						</div>
+					</div>
+
+					<div class="chevrons">
+						<div class="chevrons-content">
+							<div id="chevron-0" class="chevron"></div>
+							<div id="chevron-1" class="chevron"></div>
+							<div id="chevron-2" class="chevron"></div>
+							<div id="chevron-3" class="chevron"></div>
+							<div id="chevron-4" class="chevron"></div>
+							<div id="chevron-5" class="chevron"></div>
+							<div id="chevron-6" class="chevron"></div>
+							<div id="circle">
+								<div id="point"></div>
+							</div>
+						</div>
+					</div>
+
+					<div id="message" class="blink">
+						<span>IDLE</span>
+					</div>
+
+					<div id="planetName">
+						<span></span>
+					</div>
+
+					<div class="symbols">
+						<div id="symbol-0" class="symbol">
+							<span>+</span>
+						</div>
+						<div id="symbol-1" class="symbol">
+							<span>+</span>
+						</div>
+						<div id="symbol-2" class="symbol">
+							<span>+</span>
+						</div>
+						<div id="symbol-3" class="symbol">
+							<span>+</span>
+						</div>
+						<div id="symbol-4" class="symbol">
+							<span>+</span>
+						</div>
+						<div id="symbol-5" class="symbol">
+							<span>+</span>
+						</div>
+						<div id="symbol-6" class="symbol">
+							<span>+</span>
+						</div>
+					</div>
+
+					<div id="symbolSelection">
+						<span id="symbolSel-0">A</span>
+						<span id="symbolSel-1">B</span>
+						<span id="symbolSel-2">C</span>
+						<span id="symbolSel-3">D</span>
+						<span id="symbolSel-4">E</span>
+						<span id="symbolSel-5">F</span>
+						<span id="symbolSel-6">G</span>
+						<span id="symbolSel-7">H</span>
+						<span id="symbolSel-8">I</span>
+						<span id="symbolSel-9">J</span>
+						<span id="symbolSel-10">K</span>
+						<span id="symbolSel-11">L</span>
+						<span id="symbolSel-12">M</span>
+						<span id="symbolSel-13">N</span>
+						<span id="symbolSel-14">O</span>
+						<span id="symbolSel-15">P</span>
+						<span id="symbolSel-16">Q</span>
+						<span id="symbolSel-17">R</span>
+						<span id="symbolSel-18">S</span>
+						<span id="symbolSel-19">T</span>
+						<span id="symbolSel-20">U</span>
+						<span id="symbolSel-21">V</span>
+						<span id="symbolSel-22">W</span>
+						<span id="symbolSel-23">X</span>
+						<span id="symbolSel-24">Y</span>
+						<span id="symbolSel-25">Z</span>
+						<span id="symbolSel-26">a</span>
+						<span id="symbolSel-27">b</span>
+						<span id="symbolSel-28">c</span>
+						<span id="symbolSel-29">d</span>
+						<span id="symbolSel-30">e</span>
+						<span id="symbolSel-31">f</span>
+						<span id="symbolSel-32">g</span>
+						<span id="symbolSel-33">h</span>
+						<span id="symbolSel-34">i</span>
+						<span id="symbolSel-35">j</span>
+						<span id="symbolSel-36">k</span>
+						<span id="symbolSel-37">l</span>
+						<span id="symbolSel-38">m</span>
+					</div>
+
+					<div id="light-5"></div>
+				</div>
+			</div>
+		</div>
+
+		<canvas id="bg"></canvas>
+
+		
+	</body>
+</html>
